@@ -1,7 +1,7 @@
 
 //ניצור משתנה שקורא לספרייה מונגוס
 const mongoose = require('mongoose')
-const mongoUrl="mongodb+srv://test:1234@cluster0.onb7tvx.mongodb.net/Refael?retryWrites=true&w=majority"
+const mongoUrl="mongodb+srv://test:tvx.mongodb.net/Refael?retryWrites=true&w=majority"
 
 function connect() {
 //נחבר
