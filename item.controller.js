@@ -6,6 +6,7 @@ async function create(data){
     return await itemModel.create(data)
 }
 
+
 async function read(filter){
    
    //קוד שנועד לבדיקה בהרצה של סרביס בטרמינל
@@ -19,7 +20,18 @@ async function readOne(filter){
    return await itemModel.findOne(filter)
 }
 
-async function update(){}
-async function del(){}
+//הפילטר הוא _id
+async function updateById(filter, data){
 
-module.exports = {create,read,readOne,update,del}
+    let item= await itemModel.updateOne(filter, data)
+    console.log(item)
+
+    return await itemModel.updateOne(filter, data)
+}
+
+async function del(id){
+    return await itemModel.deleteOne({_id:id})
+}
+
+module.exports = {create,read,readOne,updateById,del}
+
